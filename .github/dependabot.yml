@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "pub"
+    directory: "/template"
+    schedule:
+      interval: monthly
+    groups:
+      dart-dependencies:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 25
+    groups:
+      ci-dependencies:
+        patterns:
+          - "*"
